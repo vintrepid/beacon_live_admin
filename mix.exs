@@ -52,7 +52,7 @@ defmodule Beacon.LiveAdmin.MixProject do
   defp deps do
     [
       # Overridable
-      override_dep(:phoenix, "~> 1.7", "PHOENIX_VERSION", "PHOENIX_PATH"),
+      override_dep(:phoenix, "~> 1.7 or ~> 1.8", "PHOENIX_VERSION", "PHOENIX_PATH"),
       override_dep(:phoenix_live_view, ">= 1.0.1", "PHOENIX_LIVE_VIEW_VERSION", "PHOENIX_LIVE_VIEW_PATH"),
       override_dep(:live_monaco_editor, "~> 0.2", "LIVE_MONACO_EDITOR_VERSION", "LIVE_MONACO_EDITOR_PATH"),
       beacon_dep(),
@@ -62,7 +62,7 @@ defmodule Beacon.LiveAdmin.MixProject do
       {:phoenix_html, "~> 4.0"},
       {:live_svelte, "~> 0.12"},
       {:floki, ">= 0.30.0"},
-      {:tailwind_compiler, path: "/Users/bcardarella/projects/tailwind_compiler", override: true},
+      {:tailwind_compiler, github: "BeaconCMS/tailwind_compiler", override: true},
       esbuild_dep(),
       {:gettext, "~> 0.26"},
       {:jason, "~> 1.0"},
